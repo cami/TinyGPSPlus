@@ -20,15 +20,12 @@ You should have received a copy of the GNU Lesser General Public
 License along with this library; if not, write to the Free Software
 Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
+#pragma once
 
 #ifndef __TinyGPSPlus_h
 #define __TinyGPSPlus_h
 
-#if defined(ARDUINO) && ARDUINO >= 100
 #include "Arduino.h"
-#else
-#include "WProgram.h"
-#endif
 #include <limits.h>
 
 #define _GPS_VERSION "1.0.2" // software version of this library
