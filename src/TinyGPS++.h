@@ -26,7 +26,23 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 #define __TinyGPSPlus_h
 
 #include "Arduino.h"
+#include <math.h>
 #include <limits.h>
+
+#ifdef abs
+#undef abs
+#endif // abs
+
+#define min(a,b) ((a)<(b)?(a):(b))
+#define max(a,b) ((a)>(b)?(a):(b))
+#define round(x)     ((x)>=0?(long)((x)+0.5):(long)((x)-0.5))
+#define radians(deg) ((deg)*DEG_TO_RAD)
+#define degrees(rad) ((rad)*RAD_TO_DEG)
+#define sq(x) ((x)*(x))
+
+#define DEG_TO_RAD 0.017453292519943295769236907684886
+#define RAD_TO_DEG 57.295779513082320876798154814105
+#define TWO_PI 6.283185307179586476925286766559
 
 #define _GPS_VERSION "1.0.2" // software version of this library
 #define _GPS_MPH_PER_KNOT 1.15077945
